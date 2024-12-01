@@ -6,13 +6,12 @@ print(Part.Name)
 ```
 สคริปต์นี้จะปริ้นชื่อ Part ที่มีอยู่ใน Workspace
 
-## 1.5 if//elseif/else - เงื่อนไข
+## 1.5 if/elseif/else - เงื่อนไข
 ```lua
 local Part = game.Workspace.Part
 if Part then --ถ้าworkspaceมีPartจริงๆ
 print(Part.Name)
-elseif Part.Transparency == 1 then --เพิ่มเงื่อนไข
-ถ้าPartล่องหนอยู่
+elseif Part.Transparency == 1 then --เพิ่มเงื่อนไขถ้าPartล่องหนอยู่
 Part.Transparency = 0 --ทำให้มันมองเห็นได้
 else -- ถ้ามันเป็นอย่างอื่นที่ไม่ใช่Partหรือมันไม่เจอPart
 print("Part Not Valid in workspace")
@@ -54,10 +53,26 @@ if v:IsA("Part") then --ถ้า v มันคือPart หรือ เร�
    end
 end
 
-for _, v in pairs(game:GetService("Workspace")GetDescandant()) do --ค้นหาแบบเจาะลึกลงไป(ทั้งหมด)
+for _, v in ipairs(game:GetService("Workspace")GetDescandant()) do --ค้นหาแบบเจาะลึกลงไป(ทั้งหมด)
 if v:IsA("Part") then --ถ้า v มันคือPart หรือ เราสามารถให้ClassName หรือ Nameได้
       v:Destroy() --ทำลายPart
 break -- หยุดการลูปหรือหยุดการทำซ้ำ
 end
 end
+```
+## 6.fireproximityprompt - การใช้งานพรอมท์แบบทันที
+
+```lua
+prompt = game.Workspace.Part:FindFirstChildOfClass("ProximityPrompt")
+if prompt then
+fireproximityprompt(prompt)
+end
+
+--การใช้กับทุกPrompt
+for _, v in ipairs(game:GetService("Workspace"):GetSedcendants()) do
+if v:IsA("Proximity") and v.Enabled == true then
+fireproximityprompt(v)
+end
+end
+
 ```
