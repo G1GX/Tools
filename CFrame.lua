@@ -1,5 +1,3 @@
--- Made by TheXploiter
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local title = Instance.new("TextLabel")
@@ -25,7 +23,7 @@ title.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 title.BorderSizePixel = 0
 title.Size = UDim2.new(0, 387, 0, 50)
 title.Font = Enum.Font.GothamBold
-title.Text = "Position Finder"
+title.Text = "CFrame"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 30.000
 title.TextWrapped = true
