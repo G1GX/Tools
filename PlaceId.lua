@@ -23,7 +23,7 @@ title.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 title.BorderSizePixel = 0
 title.Size = UDim2.new(0, 387, 0, 50)
 title.Font = Enum.Font.GothamBold
-title.Text = "Position Finder"
+title.Text = "Place ID"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 30.000
 title.TextWrapped = true
@@ -118,7 +118,7 @@ local function EKBNYI_fake_script() -- find.LocalScript
 	local script = Instance.new('LocalScript', find)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.pos.Text = tostring(game.PlaceID)
+		script.Parent.Parent.pos.Text = tostring(game.PlaceId)
 	end)
 end
 coroutine.wrap(EKBNYI_fake_script)()
