@@ -1,6 +1,6 @@
 # Exploit Tutorial
 ## 1. Variable - ตัวแปร
-``lua
+```lua
 Part = game.Workspace.Part
 print(Part.Name)
-``
+```
