@@ -1,5 +1,3 @@
--- Made by TheXploiter
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local title = Instance.new("TextLabel")
@@ -120,7 +118,7 @@ local function EKBNYI_fake_script() -- find.LocalScript
 	local script = Instance.new('LocalScript', find)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.pos.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		script.Parent.Parent.pos.Text = tostring(game.PlaceID)
 	end)
 end
 coroutine.wrap(EKBNYI_fake_script)()
